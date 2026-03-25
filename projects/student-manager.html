@@ -1,1 +1,48 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Manager</title>
+</head>
+
+<body>
+
+    <h2>Student Manager 📚</h2>
+
+    <input type="text" id="studentName" placeholder="Enter student name">
+    <button id="addBtn">Add</button>
+    <button id="showBtn">Show</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        let students = [];
+
+        let addBtn = document.getElementById("addBtn");
+        let showBtn = document.getElementById("showBtn");
+
+        addBtn.addEventListener("click", function() {
+            let name = document.getElementById("studentName").value;
+
+            if(name === "") {
+                alert("Enter name");
+                return;
+            }
+
+            students.push(name);
+            document.getElementById("studentName").value = "";
+        });
+
+        showBtn.addEventListener("click", function() {
+            let output = "";
+
+            for(let i = 0; i < students.length; i++) {
+                output += "<li>" + students[i] + "</li>";
+            }
+
+            document.getElementById("list").innerHTML = output;
+        });
+    </script>
+
+</body>
+</html>
