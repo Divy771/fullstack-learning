@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting App</title>
+</head>
+
+<body>
+
+    <h1>Welcome 👋</h1>
+
+    <button onclick="sayHello()">Say Hello</button>
+    <button onclick="sayBye()">Say Bye</button>
+    <button onclick="resetPage()">Reset</button>
+    <p id="message"></p>
+
+    <script>
+        function sayHello() {
+            document.getElementById("message").innerHTML = "Hello Divy 😄";
+            document.body.style.backgroundColor = "lightgreen";
+        }
+
+        function sayBye() {
+            document.getElementById("message").innerHTML = "Goodbye 👋";
+            document.body.style.backgroundColor = "lightcoral";
+        }
+	function resetPage() {
+    document.getElementById("message").innerHTML = "";
+    document.body.style.backgroundColor = "white";
+}
+    </script>
+
+</body>
+</html>
